@@ -12,12 +12,12 @@ publishTo := {
     //Some("snapshots" at "https://my.artifact.repo.net/" + "content/repositories/snapshots")
     Some(Resolver.file("file", new File( "target/repository" )))
   else
-    Some("releases" at "https://api.bintray.com/maven/bcolyn/releases/travis-test-scala/")
+    Some("releases" at "https://api.bintray.com/maven/bcolyn/releases/travis-test-scala/;publish=1")
 }
 
 //bintray
 credentials += Credentials("Bintray API Realm", "api.bintray.com",
-  sys.props.getOrElse("RELEASE_DEPLOY_USERNAME",""),
-  sys.props.getOrElse("RELEASE_DEPLOY_PASSWORD",""))
+  sys.env.getOrElse("RELEASE_DEPLOY_USERNAME",""),
+  sys.env.getOrElse("RELEASE_DEPLOY_PASSWORD",""))
 
 //add other credentials below (nexus or jfrog)
