@@ -6,3 +6,5 @@ How to release
 in parallel:
 * bump the snapshot version (in version.sbt) to the next desired dev version
 
+refs:
+http://szimano.org/automatic-deployments-to-jfrog-oss-and-bintrayjcentermaven-central-via-travis-ci-from-sbt/
