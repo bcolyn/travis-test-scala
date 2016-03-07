@@ -6,5 +6,6 @@ if [[ ! $TRAVIS_TAG =~ ^release-([0-9]+\.[0-9]+\.[0-9]+)$ ]]; then
 else
     RELEASE="${BASH_REMATCH[1]}"
     echo "Setting release version to $RELEASE"
+    echo "Releasing as $RELEASE_DEPLOY_USERNAME"
     echo "version in ThisBuild := \"$RELEASE\"" > version.sbt
 fi

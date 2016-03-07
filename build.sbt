@@ -12,7 +12,7 @@ publishTo := {
     //Some("snapshots" at "https://my.artifact.repo.net/" + "content/repositories/snapshots")
     Some(Resolver.file("file", new File( "target/repository" )))
   else
-    Some("releases"  at "https://api.bintray.com/maven/bcolyn/releases/travis-test-scala/;publish=1")
+    Some("releases" at "https://api.bintray.com/maven/bcolyn/releases/travis-test-scala/")
 }
 
 //bintray
